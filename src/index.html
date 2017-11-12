@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.2/vue.min.js"></script>
+</head>
+<body>
+    <div class="container" id="app">
+        <h1 class="title color text-center py-3">HELLO WEBPACK</h1>
+        <div class="row">
+            <div class="col-md-6 py-1">
+                <div class="card color">
+                    <div class="card-body d-flex">
+                        <div class="text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius rem incidunt quam perspiciatis ipsum totam, illo, accusamus doloremque maxime quo porro dolores voluptatum nam sed deserunt, aperiam mollitia. Reiciendis, et!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 py-1">
+                <div class="card h-100 color">
+                    <div class="card-body d-flex align-items-center justify-content-center">
+                        <div class="text-center card-b">
+                            <div class="ball">{{msg}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <Card :teams="cav">
+                    <template scope="teams" slot="player">
+                        <li class="list-group-item">{{teams.props.name}}</li>
+                    </template>
+                </Card>
+            </div>
+            <div class="col-md-6">
+                <Card :teams="pacers">
+                    <template scope="teams" slot="player">
+                        <li class="list-group-item">{{teams.props.name}}</li>
+                    </template>
+                </Card>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
